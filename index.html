@@ -90,7 +90,7 @@
                     <h1 class="hero-titel">
                         Эффективные решения для вашего бизнеса
                     </h1>
-                    <button type="button" class="button">
+                    <button type="button" class="button" data-modal-open>
                         Заказать услугу
                     </button>
                 </div>
@@ -185,36 +185,41 @@
                 <div class="study-div container">
                     <h2 class="study-title">Чем мы занимаемся</h2>
                     <ul class="study-list list">
-                       
                         <li class="study-item">
-                             <div class="study-item-div">
-                            <img
-                                src="img/box1.jpg"
-                                alt="разработка программного обеспечения"
-                                width="370"
-                            />
-                            <p class="study-item-text">Десктопные приложения</p>
-                        </div>
+                            <div class="study-item-div">
+                                <img
+                                    src="img/box1.jpg"
+                                    alt="разработка программного обеспечения"
+                                    width="370"
+                                />
+                                <p class="study-item-text">
+                                    Десктопные приложения
+                                </p>
+                            </div>
                         </li>
                         <li class="study-item">
                             <div class="study-item-div">
-                            <img
-                                src="img/box2.jpg"
-                                alt="тестирование мобильного приложения"
-                                width="370"
-                            />
-                            <p class="study-item-text">Мобильные приложения</p>
-                         </div>
+                                <img
+                                    src="img/box2.jpg"
+                                    alt="тестирование мобильного приложения"
+                                    width="370"
+                                />
+                                <p class="study-item-text">
+                                    Мобильные приложения
+                                </p>
+                            </div>
                         </li>
                         <li class="study-item">
                             <div class="study-item-div">
-                            <img
-                                src="img/box3.jpg"
-                                alt="работа с цветовой палитрой"
-                                width="370"
-                            />
-                            <p class="study-item-text">Дизайнерские решения</p>
-                         </div>
+                                <img
+                                    src="img/box3.jpg"
+                                    alt="работа с цветовой палитрой"
+                                    width="370"
+                                />
+                                <p class="study-item-text">
+                                    Дизайнерские решения
+                                </p>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -615,7 +620,7 @@
                     </address>
                 </div>
                 <div class="footer-soc-div">
-                    <h2 class="footer-soc-titel">присоединяйтесь</h2>
+                    <p class="footer-soc-titel">присоединяйтесь</p>
                     <ul class="footer-soc-list list">
                         <li class="footer-soc-item">
                             <a href="" class="footer-soc-link link">
@@ -673,5 +678,22 @@
                 </div>
             </div>
         </footer>
+<!--modal window-->
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <button type="button" class="modal-close-btn" data-modal-close>
+                    <svg
+                                    class="modal-close-icon"
+                                    width="18"
+                                    height="18"
+                                >
+                                    <use
+                                        href="./img/icons.svg#icon-close-btn"
+                                    ></use>
+                                </svg>
+                </button>
+            </div>
+        </div>
+    <script src="./js/modal.js"></script>
     </body>
 </html>

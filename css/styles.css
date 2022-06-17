@@ -11,8 +11,7 @@
     --o-transform: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     --o-transform-box-shadow: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
     --o-trasform-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    --o-trasform-background: background-color  250ms cubic-bezier(0.4, 0, 0.2, 1);
-
+    --o-trasform-background: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 img {
@@ -52,7 +51,6 @@ body {
     margin: 0px auto;
     padding-right: 15px;
     padding-left: 15px;
-    outline: 1px solid red;
 }
 
 /*----------------------Header---------------------*/
@@ -100,15 +98,16 @@ body {
     color: var(--title-text-color);
     padding-top: 32px;
     padding-bottom: 32px;
+    transition: var(--o-trasform-color);
 }
 
-.current{
+.current {
     position: relative;
     color: var(--accent-color);
 }
 
-.current::after{
-    content: "" ;
+.current::after {
+    content: '';
     width: 100%;
     height: 4px;
     border-radius: 2px;
@@ -118,15 +117,12 @@ body {
     left: 0;
 }
 
-
 .navigation-link:hover,
 .navigation-link:focus,
-.current{
+.current {
     color: var(--accent-color);
     cursor: pointer;
-    transition: var(--o-trasform-color);
 }
-
 
 .contact-link-icon {
     fill: currentColor;
@@ -147,12 +143,12 @@ body {
     padding-bottom: 32px;
     display: flex;
     align-items: center;
+    transition: var(--o-trasform-color);
 }
 .contact-link:hover,
 .contact-link:focus {
     color: var(--accent-color);
     cursor: pointer;
-    transition: var(--o-trasform-color);
 }
 .contact-item:not(:last-child) {
     margin-right: 50px;
@@ -209,14 +205,17 @@ body {
     font-family: 'Roboto', sans-serif;
     align-items: center;
     text-align: center;
+
+    box-shadow: none;
+
+     transition: var(--o-trasform-background), 
+     var(--o-transform-box-shadow);
 }
 .button:hover,
 .button:focus {
     background-color: #188ce8;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
-    transition: var(--o-trasform-background),
-                var(--o-transform-box-shadow);
 }
 
 /*-------------------feature--------------------*/
@@ -281,12 +280,12 @@ body {
     margin-bottom: 50px;
 }
 
-.study-item-div{
+.study-item-div {
     position: relative;
 }
 
-.study-item-text{
-   font-weight: 700;
+.study-item-text {
+    font-weight: 700;
     font-size: 14px;
     line-height: 16px;
     text-align: center;
@@ -370,13 +369,13 @@ body {
     border-radius: 50%;
     background-color: var(--primary-background-color);
     color: #afb1b8;
+    transition: var(--o-trasform-color), 
+    var(--o-trasform-background);
 }
 .team-soc-link:hover,
 .team-soc-link:focus {
     background-color: var(--accent-color);
     color: var(--primary-background-color);
-    transition: var(--o-trasform-color),
-                var(--o-trasform-background);
 }
 
 .team-soc-icon {
@@ -406,13 +405,13 @@ body {
     justify-content: center;
     color: #afb1b8;
     outline: transparent;
+    transition: var(--o-trasform-color);
 }
 
 .clients-link:hover,
 .clients-link:focus {
     color: var(--accent-color);
     border: 1px solid var(--accent-color);
-    transition: var(--o-trasform-color);
 }
 .clients-icon {
     fill: currentColor;
@@ -427,6 +426,11 @@ body {
 }
 .footer-div {
     display: flex;
+    align-items: baseline;
+}
+
+.fotter-div-nav{
+    display: inline-block;
 }
 .footer-address {
     margin-top: 20px;
@@ -463,6 +467,7 @@ body {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
+    transition: var(--o-trasform-color);
 }
 .footer-link {
     font-style: normal;
@@ -470,18 +475,17 @@ body {
     line-height: 1.71;
     letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.6);
+    transition: var(--o-trasform-color);
 }
 .footer-link:hover,
 .footer-link:focus {
     color: var(--accent-color);
     cursor: pointer;
-transition: var(--o-trasform-color);
 }
 .fotter-address-link:hover,
 .fotter-address-link:focus {
     color: var(--accent-color);
     cursor: pointer;
-    transition: var(--o-trasform-color);
 }
 
 .footer-soc-titel {
@@ -491,16 +495,17 @@ transition: var(--o-trasform-color);
     letter-spacing: 0.03em;
     text-transform: uppercase;
     color: var(--secondary-text-color);
-    margin-bottom: 20px;
-    margin-top: 12px;
 }
 
 .footer-soc-div {
+    display: inline-block;
     margin-left: 70px;
+
 }
 
 .footer-soc-list {
     display: flex;
+    margin-top: 20px;
 }
 
 .footer-soc-item {
@@ -528,8 +533,7 @@ transition: var(--o-trasform-color);
 .footer-soc-link:focus {
     background-color: var(--accent-color);
     color: var(--primary-background-color);
-    transition: var(--o-trasform-color),
-                var(--o-trasform-background);
+    transition: var(--o-trasform-color), var(--o-trasform-background);
 }
 .footer-soc-icon {
     fill: currentColor;
@@ -560,6 +564,10 @@ transition: var(--o-trasform-color);
 
     padding: 6px 22px;
     border: none;
+    box-shadow: none;
+
+    transition: var(--o-trasform-color), var(--o-trasform-background),
+        var(--o-transform-box-shadow);
 }
 
 .filter-button-portfolio:hover,
@@ -568,9 +576,6 @@ transition: var(--o-trasform-color);
     background-color: var(--accent-color);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
         0px 2px 2px rgba(0, 0, 0, 0.12);
-    transition: var(--o-trasform-color),
-                var(--o-trasform-background),
-                var(--o-transform-box-shadow);
 }
 
 /*--------------------Content----------------------*/
@@ -580,37 +585,40 @@ transition: var(--o-trasform-color);
     gap: 30px;
 }
 
-.top-div{
-    position: relative; 
-    overflow: hidden;   
+.top-div {
+    position: relative;
+    overflow: hidden;
 }
 
-.content-item-link:hover .content-top-text{
-    background: var(--top-background);
+.content-item-link{
+    box-shadow: none;
+    transition: var(--o-transform-box-shadow);  
+}
+
+.content-item-link:hover .content-top-text {
     transform: translateY(0);
-    transition: var(--o-transform);
 }
 
 .content-item-link:hover,
-.content-item-link:focus{
+.content-item-link:focus {
     display: block;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
         1px 4px 6px rgba(0, 0, 0, 0.16);
-    transition: var(--o-trasform-color),
-                var(--o-trasform-background),
-                var(--o-transform-box-shadow);
 }
 
-.content-top-text{
+.content-top-text {
     position: absolute;
     top: 0;
     font-size: 18px;
     line-height: 1.56;
     letter-spacing: 0.03em;
-    color:var(--secondary-text-color);
+    color: var(--secondary-text-color);
     padding: 63px 24px;
     height: 100%;
     transform: translateY(100%);
+    overflow: auto;
+    transition: var(--o-transform);
+    background-color: var(--top-background);
 }
 
 .content-item-div {
@@ -633,4 +641,53 @@ transition: var(--o-trasform-color);
     line-height: 1.87;
     letter-spacing: 0.03em;
     color: var(--primary-text-color);
+}
+/*--------------modal window------------------*/
+.backdrop{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 500ms cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-hidden .modal{
+    transform: translate(-50%, -50%) scale(0) rotate(360deg); 
+}
+
+.modal{
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--primary-background-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1) rotate(0);
+    transition: transform 500ms ease-out;
+
+}
+
+.modal-close-btn{
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
