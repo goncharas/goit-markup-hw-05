@@ -597,7 +597,8 @@ body {
    
 }
 
-.content-item-link:hover .content-top-text {
+.content-item-link:hover .content-top-text,
+.content-item-link:focus .content-top-text {
     transform: translateY(0);
 }
 
