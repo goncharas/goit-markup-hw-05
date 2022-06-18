@@ -588,11 +588,13 @@ body {
 .top-div {
     position: relative;
     overflow: hidden;
+ 
 }
 
 .content-item-link{
     box-shadow: none;
-    transition: var(--o-transform-box-shadow);  
+    transition: var(--o-transform-box-shadow); 
+   
 }
 
 .content-item-link:hover .content-top-text {
@@ -614,11 +616,12 @@ body {
     letter-spacing: 0.03em;
     color: var(--secondary-text-color);
     padding: 63px 24px;
-    height: 100%;
+    height: 101%;
     transform: translateY(100%);
     overflow: auto;
     transition: var(--o-transform);
     background-color: var(--top-background);
+    
 }
 
 .content-item-div {
